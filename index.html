@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Library</title>
+</head>
+<body>
+<header>
+    <div class="header-background"><h1 class="header-text">Library</h1></div>     
+</header>
+<main class="container">
+    <div class="cards-container">
+
+    </div>
+    <div class="new-book">
+        <button class="new-book-button" onclick="showAddBook()">Add new Book</button>
+    </div>
+
+</main>
+<div class="add-book-container hidden">
+    <div class="add-book-module">
+        <button class="fas fa-window-close" onclick="closeAddBook()"></button>
+        <label>Title: </label><input type="text" class="form-title">
+        <label>Author: </label><input type="text" class="form-author">
+        <label>Pages: </label><input type="number" class="form-pages">
+        <button onclick="addBooktoLibrary()"> Submit </button>
+    </div>
+</div>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

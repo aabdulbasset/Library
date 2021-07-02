@@ -1,0 +1,148 @@
+[data-read="false"]{
+    --card-color : #F38BA0;
+}
+[data-read="true"]{
+    --card-color : #EDF6E5;
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background:#B5EAEA;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:20vh;
+    flex-direction: column;
+}
+.face > h2{
+    text-align: center;
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+.header-text{
+    text-align: center;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+.header-background{
+    
+    background-color: #EDF6E5;
+    position:relative;
+    height:20vh;
+}
+.book-card{
+    position:relative;
+    background-color:white;
+    width:275px;
+    height:50vh;
+    overflow: hidden;
+    margin-bottom:90px;
+    transform-style: preserve-3d;
+    border-radius: 0.35em;
+}
+.book-card:hover  .face{
+    height: 25%;
+}
+
+.face, .back{
+    position:absolute;
+    height:100%;
+    width:100%;
+    transition: all 1s;
+    backface-visibility: hidden;
+}
+.back{
+    background-color: var(--card-color)
+}
+.info > h3{
+    padding-bottom:20px;
+    padding-left:10%;
+}
+.face{
+    height:100%;
+    background-color: #FFBCBC;
+}
+.cards-container{
+    min-width:20vw;
+    width:70vw;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.info{
+    position: relative;
+    top:33%;
+}
+.card-footer{
+    position:relative;
+    top:50%;
+    text-align: center;
+}
+.card-footer>button{
+    background:transparent
+}
+button{
+    border:hidden;
+    transition: all 0.3s;
+    font-size: 20px;
+}
+button:hover{
+    cursor: pointer;
+    color:green;
+} 
+.fa-trash{
+    margin-right:40px;
+}
+.hidden{
+    transform: translateY(-100%);
+}
+.new-book-button{
+    padding: 10px;
+    border-radius: 0.35em;
+    margin-bottom:4vh;
+}
+.add-book-container{
+    transition:all 1s;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(41, 41, 41, 0.384)
+}
+.add-book-module{
+    position:relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width:200px;
+    height:50%;
+    text-align: center;
+    font-weight: 700;
+    background-color: #EDF6E5;
+    border-radius:0.35em;
+    padding:25px;
+}
+.add-book-module > input{
+    border:solid rgb(111, 193, 247) 1px;
+    background-color:transparent;
+    border-radius: 0.15em;
+    padding:10px;
+}
+.add-book-module > button{
+    background-color: transparent;
+}
+.fa-window-close{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
