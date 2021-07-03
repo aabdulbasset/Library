@@ -21,7 +21,9 @@ function updateLocalStorage(){
 }
 function initLib(){
     myLibrary = JSON.parse(localStorage.getItem("library"))
-    console.log(myLibrary)
+    if(myLibrary == null){
+        myLibrary = []
+    }
     myLibrary.forEach(function(e,i){
         $(".cards-container").append(`       <div class="book-card" data-id="${i}">
         <div class="back" data-read="${e["isRead"]}">
